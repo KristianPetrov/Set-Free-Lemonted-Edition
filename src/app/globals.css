@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #f5f5f5;
+  --lemonted-pink: #ff3ea5; /* electric pink */
+  --lemonted-yellow: #ffe74a; /* lemonade yellow */
 }
 
 @theme inline {
@@ -12,15 +14,99 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+/* Always-on dark aesthetic; no auto-theme switching */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Utility accents */
+.lemonted-gradient-text {
+  background: linear-gradient(90deg, var(--lemonted-yellow), var(--lemonted-pink));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-lemonted {
+  background: radial-gradient(120% 120% at 0% 0%, rgba(255, 231, 74, 0.25) 0%, rgba(255, 62, 165, 0.25) 50%, rgba(255, 255, 255, 0) 100%), #0a0a0a;
+  border: 1px solid rgba(255, 231, 74, 0.35);
+  color: #ffffff;
+  transition: transform 160ms ease, border-color 160ms ease, filter 160ms ease;
+}
+.btn-lemonted:hover {
+  transform: translateY(-1px);
+  border-color: var(--lemonted-pink);
+  filter: drop-shadow(0 0 24px rgba(255, 62, 165, 0.25));
+}
+
+.badge-lemonted {
+  border: 1px solid rgba(255, 231, 74, 0.35);
+  color: var(--lemonted-yellow);
+}
+
+/* Background accent utilities */
+.accent-pink {
+  background: radial-gradient(circle at 30% 30%, var(--lemonted-pink), transparent 60%);
+}
+
+.accent-yellow {
+  background: radial-gradient(circle at 70% 70%, var(--lemonted-yellow), transparent 60%);
+}
+
+.logo-bubble {
+  background: linear-gradient(135deg, var(--lemonted-yellow), var(--lemonted-pink));
+}
+
+/* Neon headline */
+.neon-pink-yellow {
+  color: var(--lemonted-pink);
+  text-shadow:
+    0 0 6px rgba(255, 231, 74, 0.65),
+    0 0 14px rgba(255, 231, 74, 0.45),
+    0 0 26px rgba(255, 62, 165, 0.35);
+}
+.neon-pink-yellow:hover {
+  text-shadow:
+    0 0 8px rgba(255, 231, 74, 0.8),
+    0 0 18px rgba(255, 231, 74, 0.6),
+    0 0 34px rgba(255, 62, 165, 0.5);
+}
+
+/* Yellow text with pink outline and glow */
+.neon-yellow-pink-outline {
+  color: var(--lemonted-yellow);
+  -webkit-text-stroke: 2px var(--lemonted-pink);
+  text-shadow:
+    0 0 6px rgba(255, 62, 165, 0.6),
+    0 0 14px rgba(255, 62, 165, 0.5),
+    0 0 26px rgba(255, 62, 165, 0.4),
+    0 0 42px rgba(255, 62, 165, 0.35);
+}
+.neon-yellow-pink-outline:hover {
+  text-shadow:
+    0 0 8px rgba(255, 62, 165, 0.75),
+    0 0 18px rgba(255, 62, 165, 0.65),
+    0 0 36px rgba(255, 62, 165, 0.55),
+    0 0 54px rgba(255, 62, 165, 0.5);
+}
+
+/* Variants for smaller text sizes */
+.neon-yellow-pink-outline-md {
+  color: var(--lemonted-yellow);
+  -webkit-text-stroke: 1px var(--lemonted-pink);
+  text-shadow:
+    0 0 4px rgba(255, 62, 165, 0.6),
+    0 0 10px rgba(255, 62, 165, 0.45),
+    0 0 18px rgba(255, 62, 165, 0.35);
+}
+
+.neon-yellow-pink-outline-sm {
+  color: var(--lemonted-yellow);
+  -webkit-text-stroke: 0.5px var(--lemonted-pink);
+  text-shadow:
+    0 0 3px rgba(255, 62, 165, 0.5),
+    0 0 8px rgba(255, 62, 165, 0.35);
 }
