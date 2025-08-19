@@ -137,8 +137,24 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="px-6 sm:px-10 pb-10 flex items-center justify-between text-xs text-white/50">
+        <footer className="px-6 sm:px-10 pb-10 flex flex-wrap items-center justify-between gap-4 text-xs text-white/50">
           <span className="neon-yellow-pink-outline-sm">© {new Date().getFullYear()} Lemonted Edition</span>
+          <a
+            href="https://setfreedigitaldisciples.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2"
+            aria-label="Designed by Set Free Digital Disciples"
+          >
+            <Image
+              src="/SetFreeDigitalDisciplesPortal.png"
+              alt="Set Free Digital Disciples Portal"
+              width={24}
+              height={24}
+              className="rounded"
+            />
+            <span className="neon-yellow-pink-outline-sm">Designed by Set Free Digital Disciples</span>
+          </a>
           <span className="neon-yellow-pink-outline-sm">Lemonted by design · Legendary by nature</span>
         </footer>
       </main>
