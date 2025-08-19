@@ -17,10 +17,10 @@ export default function Home() {
           <div className="flex items-center gap-3">
             <Image src="/fresh-squeezed-lemonted-edition.png" alt="Lemonted Edition" width={36} height={36} className="rounded" />
           </div>
-          <nav className="hidden sm:flex items-center gap-6 text-white/70 text-sm">
-            <a href="#drops" className="hover:text-white">Drops</a>
-            <a href="#story" className="hover:text-white">Story</a>
-            <a href="#subscribe" className="hover:text-white">Subscribe</a>
+          <nav className="hidden sm:flex items-center gap-3 sm:gap-4">
+            <a href="#drops" className="btn-lemonted rounded-full px-4 py-2 text-xs sm:text-sm font-semibold uppercase tracking-wide">Drops</a>
+            <a href="#story" className="btn-lemonted rounded-full px-4 py-2 text-xs sm:text-sm font-semibold uppercase tracking-wide">Story</a>
+            <a href="#subscribe" className="btn-lemonted rounded-full px-4 py-2 text-xs sm:text-sm font-semibold uppercase tracking-wide">Subscribe</a>
           </nav>
         </header>
 

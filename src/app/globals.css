@@ -40,15 +40,19 @@ body {
 }
 
 .btn-lemonted {
-  background: radial-gradient(120% 120% at 0% 0%, rgba(var(--lemonted-yellow-rgb), 0.25) 0%, rgba(var(--lemonted-pink-rgb), 0.25) 50%, rgba(255, 255, 255, 0) 100%), #0a0a0a;
-  border: 1px solid rgba(255, 231, 74, 0.35);
-  color: #ffffff;
-  transition: transform 160ms ease, border-color 160ms ease, filter 160ms ease;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--lemonted-pink) 92%, white 8%), var(--lemonted-pink));
+  border: 1px solid rgba(var(--lemonted-pink-rgb), 0.55);
+  color: var(--lemonted-yellow);
+  text-shadow: 0 0 4px rgba(var(--lemonted-yellow-rgb), 0.45);
+  transition: transform 160ms ease, border-color 160ms ease, filter 160ms ease, background 160ms ease;
 }
 .btn-lemonted:hover {
   transform: translateY(-1px);
-  border-color: var(--lemonted-pink);
-  filter: drop-shadow(0 0 24px rgba(var(--lemonted-pink-rgb), 0.25));
+  background: linear-gradient(180deg, color-mix(in oklab, var(--lemonted-pink) 85%, white 15%), var(--lemonted-pink));
+  border-color: rgba(var(--lemonted-yellow-rgb), 0.65);
+  filter:
+    drop-shadow(0 0 18px rgba(var(--lemonted-pink-rgb), 0.35))
+    drop-shadow(0 0 10px rgba(var(--lemonted-yellow-rgb), 0.25));
 }
 
 .badge-lemonted {
