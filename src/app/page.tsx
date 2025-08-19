@@ -6,12 +6,14 @@ export default function Home() {
       <main className="relative isolate min-h-screen overflow-hidden">
         {/* Background accents */}
         <div className="pointer-events-none absolute inset-0 -z-10">
+          <div className="absolute inset-0 hero-gradient" />
+          <div className="absolute inset-0 hero-grain" />
           <div className="absolute -top-24 -left-16 h-[420px] w-[420px] rounded-full blur-[120px] opacity-[0.18] accent-pink" />
           <div className="absolute -bottom-24 -right-16 h-[520px] w-[520px] rounded-full blur-[140px] opacity-[0.18] accent-yellow" />
         </div>
 
         {/* Nav */}
-        <header className="flex items-center justify-between px-6 sm:px-10 py-6">
+        <header className="nav-bar flex items-center justify-between px-6 sm:px-10 py-6">
           <div className="flex items-center gap-3">
             <Image src="/fresh-squeezed-lemonted-edition.png" alt="Lemonted Edition" width={36} height={36} className="rounded" />
           </div>
@@ -37,10 +39,13 @@ export default function Home() {
               />
             </div>
             <h1 className="mt-6 text-4xl sm:text-6xl md:text-7xl font-extrabold leading-[1.05] tracking-tight">
-              <span className="neon-yellow-pink-outline">Holy But Hood.</span>
+              <span className="title-layer">
+                <span aria-hidden className="title-stroke">HOLY BUT HOOD.</span>
+                <span className="title-fill">HOLY BUT HOOD.</span>
+              </span>
             </h1>
             <p className="mt-6 max-w-2xl mx-auto text-base sm:text-lg neon-yellow-pink-outline-md">
-              Lemonted Edition is more than just streetwear—it’s a lifestyle squeezed straight from the grind and served with bold flavor. Born out of hustle, faith, and raw creativity, we design pieces that hit like fresh lemonade on a hot day: sharp, refreshing, and impossible to ignore.
+              Lemonted Edition is more than just streetwear—it’s a lifestyle squeezed straight from the grind and served lemonted fresh. Born out of hustle, faith, and raw creativity, we design pieces that hit like fresh lemonade on a hot day: sharp, refreshing, and impossible to ignore.
             </p>
             <p className="mt-3 max-w-2xl mx-auto text-base sm:text-lg neon-yellow-pink-outline-sm">
               Our clothes carry the DNA of the streets—skater cuts, hood-inspired designs, and unapologetic statements—blended with a touch of light and hope. Every drop is limited, every release is a statement, and every piece is built to stand out while staying true.
@@ -59,7 +64,7 @@ export default function Home() {
         {/* Feature Banner */}
         <section id="drops" className="px-6 sm:px-10 pb-20">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-white/10 bg-[#0f0f10]">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-2xl card-surface">
               <Image
                 src="/lemonted-edition-playa-made-lemonade.PNG"
                 alt="Lemonted Edition – Playa Made Lemonade"
@@ -68,7 +73,7 @@ export default function Home() {
                 priority
               />
             </div>
-            <div className="flex flex-col justify-center gap-4 p-6 md:p-8 rounded-2xl border border-white/10 bg-[#0f0f10]">
+            <div className="flex flex-col justify-center gap-4 p-6 md:p-8 rounded-2xl card-surface">
               <h2 className="text-2xl sm:text-3xl font-bold">
                 <span className="neon-yellow-pink-outline-md">Fresh Squeezed. Street Approved.</span>
               </h2>
@@ -97,7 +102,7 @@ export default function Home() {
 
         {/* Subscribe */}
         <section id="subscribe" className="px-6 sm:px-10 pb-28">
-          <div className="max-w-3xl rounded-2xl border border-white/10 bg-[#0f0f10] p-6 sm:p-8">
+          <div className="max-w-3xl rounded-2xl card-surface p-6 sm:p-8">
             <h4 className="text-2xl font-bold">Stay in the know</h4>
             <p className="mt-2 neon-yellow-pink-outline-sm">Get first access to limited drops and restocks.</p>
             <form className="mt-5 flex flex-col sm:flex-row gap-3">
@@ -115,7 +120,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="px-6 sm:px-10 pb-10 flex items-center justify-between text-xs text-white/50">
           <span className="neon-yellow-pink-outline-sm">© {new Date().getFullYear()} Lemonted Edition</span>
-          <span className="neon-yellow-pink-outline-sm">Limited by design · Legendary by nature</span>
+          <span className="neon-yellow-pink-outline-sm">Lemonted by design · Legendary by nature</span>
         </footer>
       </main>
     </div>
