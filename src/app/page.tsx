@@ -4,6 +4,25 @@ export default function Home() {
   return (
     <div className="min-h-screen w-full font-sans">
       <main className="relative isolate min-h-screen overflow-hidden">
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Lemonted Edition',
+              url: 'https://lemonted-edition.com/',
+              logo: 'https://lemonted-edition.com/fresh-squeezed-set-free-lemonted-edition.png',
+              sameAs: [
+                'https://instagram.com/lemonted',
+                'https://x.com/lemonted',
+              ],
+              description:
+                "Lemonted Edition is more than streetwear—it's a lifestyle squeezed from the grind and served bold.",
+            }),
+          }}
+        />
         {/* Background accents */}
         <div className="pointer-events-none absolute inset-0 -z-10">
           <div className="absolute inset-0 hero-gradient" />

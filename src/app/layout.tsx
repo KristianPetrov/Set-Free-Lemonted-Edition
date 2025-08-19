@@ -10,9 +10,72 @@ const baloo2 = Baloo_2({
 });
 
 export const metadata: Metadata = {
-  title: "Lemonted Edition – Playa Made. Holy But Hood.",
+  title: {
+    default: "Lemonted Edition – Playa Made. Holy But Hood.",
+    template: "%s | Lemonted Edition",
+  },
   description:
     "Lemonted Edition is more than streetwear—it's a lifestyle squeezed from the grind and served bold. Limited by design, legendary by nature.",
+  applicationName: "Lemonted Edition",
+  keywords: [
+    "Lemonted Edition",
+    "lemonted",
+    "streetwear",
+    "skate",
+    "hood",
+    "limited drops",
+    "apparel",
+    "hoodies",
+    "tees",
+    "caps",
+  ],
+  authors: [{ name: "Lemonted Edition" }],
+  creator: "Lemonted Edition",
+  publisher: "Lemonted Edition",
+  category: "streetwear",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Lemonted Edition – Playa Made. Holy But Hood.",
+    description:
+      "Lemonted Edition is more than streetwear—it's a lifestyle squeezed from the grind and served bold. Limited by design, legendary by nature.",
+    url: "/",
+    siteName: "Lemonted Edition",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/fresh-squeezed-set-free-lemonted-edition.png",
+        width: 1024,
+        height: 1024,
+        alt: "Lemonted Edition – Holy But Hood",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Lemonted Edition – Playa Made. Holy But Hood.",
+    description:
+      "Lemonted Edition is more than streetwear—it's a lifestyle squeezed from the grind and served bold.",
+    images: ["/fresh-squeezed-set-free-lemonted-edition.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  icons: {
+    icon: "/favicon.ico",
+  },
+  themeColor: "#552583",
+  formatDetection: { telephone: false },
 };
 
 export default function RootLayout({
