@@ -1,10 +1,12 @@
 import Image from "next/image";
-
+import Script from "next/script";
+import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-screen w-full font-sans">
       <main className="relative isolate min-h-screen overflow-hidden">
-        <script
+        <Script
+          id="lemonted-schema"
           type="application/ld+json"
           suppressHydrationWarning
           dangerouslySetInnerHTML={{
@@ -33,13 +35,19 @@ export default function Home() {
 
         {/* Nav */}
         <header className="nav-bar flex items-center justify-between px-6 sm:px-10 py-6">
-          <div className="flex items-center gap-3">
-            <Image src="/fresh-squeezed-lemonted-edition.png" alt="Lemonted Edition" width={36} height={36} className="rounded" />
-          </div>
+          <Link
+            href="https://setfreedigitaldisciples.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3"
+            aria-label="Designed by Set Free Digital Disciples"
+          >
+            <Image src="/SetFreeDigitalDisciplesPortal.png" alt="Lemonted Edition" width={50} height={50} className="rounded" />
+            </Link>
           <nav className="hidden sm:flex items-center gap-3 sm:gap-4">
-            <a href="#drops" className="btn-lemonted rounded-full px-4 py-2 text-xs sm:text-sm font-semibold uppercase tracking-wide">Drops</a>
-            <a href="#story" className="btn-lemonted rounded-full px-4 py-2 text-xs sm:text-sm font-semibold uppercase tracking-wide">Story</a>
-            <a href="#subscribe" className="btn-lemonted rounded-full px-4 py-2 text-xs sm:text-sm font-semibold uppercase tracking-wide">Subscribe</a>
+            <Link href="#drops" className="btn-lemonted rounded-full px-4 py-2 text-xs sm:text-sm font-semibold uppercase tracking-wide">Drops</Link>
+            <Link href="#story" className="btn-lemonted rounded-full px-4 py-2 text-xs sm:text-sm font-semibold uppercase tracking-wide">Story</Link>
+            <Link href="#subscribe" className="btn-lemonted rounded-full px-4 py-2 text-xs sm:text-sm font-semibold uppercase tracking-wide">Subscribe</Link>
           </nav>
         </header>
 
@@ -70,8 +78,8 @@ export default function Home() {
               Our clothes carry the DNA of the streets—skater cuts, hood-inspired designs, and unapologetic statements—blended with a touch of light and hope. Every drop is limited, every release is a statement, and every piece is built to stand out while staying true.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 items-center justify-center">
-              <a href="#drops" className="btn-lemonted rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-wide">Shop Lemonted Drops</a>
-              <a href="#story" className="rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-wide badge-lemonted">Our Story</a>
+              <Link href="#drops" className="btn-lemonted rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-wide">Shop Lemonted Drops</Link>
+              <Link href="#story" className="rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-wide badge-lemonted">Our Story</Link>
             </div>
             <div className="mt-10 flex items-center justify-center gap-4 text-white/60 text-xs uppercase tracking-wide">
               <span className="badge-lemonted rounded-full px-2 py-1">Limited by design</span>
@@ -137,25 +145,35 @@ export default function Home() {
         </section>
 
         {/* Footer */}
-        <footer className="px-6 sm:px-10 pb-10 flex flex-wrap items-center justify-between gap-4 text-xs text-white/50">
-          <span className="neon-yellow-pink-outline-sm">© {new Date().getFullYear()} Lemonted Edition</span>
-          <a
+        <footer className="px-6 sm:px-10 pb-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-white/50">
+          <div className="sm:col-span-3 flex justify-center">
+            <Link
+              href="https://setfreedigitaldisciples.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex"
+              aria-label="Set Free Digital Disciples"
+            >
+              <Image
+                src="/SetFreeDigitalDisciplesPortal.png"
+                alt="Set Free Digital Disciples Portal"
+                width={100}
+                height={100}
+                className="rounded"
+              />
+            </Link>
+          </div>
+          <span className="neon-yellow-pink-outline-sm justify-self-start">Lemonted by design · Legendary by nature</span>
+          <Link
             href="https://setfreedigitaldisciples.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2"
+            className="neon-yellow-pink-outline-sm justify-self-center"
             aria-label="Designed by Set Free Digital Disciples"
           >
-            <Image
-              src="/SetFreeDigitalDisciplesPortal.png"
-              alt="Set Free Digital Disciples Portal"
-              width={24}
-              height={24}
-              className="rounded"
-            />
-            <span className="neon-yellow-pink-outline-sm">Designed by Set Free Digital Disciples</span>
-          </a>
-          <span className="neon-yellow-pink-outline-sm">Lemonted by design · Legendary by nature</span>
+            Designed by Set Free Digital Disciples
+          </Link>
+          <span className="neon-yellow-pink-outline-sm justify-self-end">© {new Date().getFullYear()} Lemonted Edition</span>
         </footer>
       </main>
     </div>

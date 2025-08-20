@@ -72,7 +72,11 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/SetFreeDigitalDisciplesPortal.png", type: "image/png", rel: "icon" },
+      { url: "/SetFreeDigitalDisciplesPortal.png", type: "image/png", rel: "shortcut icon" },
+      { url: "/SetFreeDigitalDisciplesPortal.png", type: "image/png", rel: "apple-touch-icon" },
+    ],
   },
   themeColor: "#552583",
   formatDetection: { telephone: false },
