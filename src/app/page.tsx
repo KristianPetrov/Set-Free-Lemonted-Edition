@@ -33,23 +33,7 @@ export default function Home() {
           <div className="absolute -bottom-24 -right-16 h-[520px] w-[520px] rounded-full blur-[140px] opacity-[0.18] accent-yellow" />
         </div>
 
-        {/* Nav */}
-        <header className="nav-bar flex items-center justify-between px-6 sm:px-10 py-6">
-          <Link
-            href="https://setfreedigitaldisciples.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3"
-            aria-label="Designed by Set Free Digital Disciples"
-          >
-            <Image src="/SetFreeDigitalDisciplesPortal.png" alt="Lemonted Edition" width={50} height={50} className="rounded" />
-            </Link>
-          <nav className="hidden sm:flex items-center gap-3 sm:gap-4">
-            <Link href="#drops" className="btn-lemonted rounded-full px-4 py-2 text-xs sm:text-sm font-semibold uppercase tracking-wide">Drops</Link>
-            <Link href="#story" className="btn-lemonted rounded-full px-4 py-2 text-xs sm:text-sm font-semibold uppercase tracking-wide">Story</Link>
-            <Link href="#subscribe" className="btn-lemonted rounded-full px-4 py-2 text-xs sm:text-sm font-semibold uppercase tracking-wide">Subscribe</Link>
-          </nav>
-        </header>
+        {/* Nav is provided via parallel route */}
 
         {/* Hero */}
         <section className="px-6 sm:px-10 pt-10 pb-16 sm:pt-16 sm:pb-24">
@@ -78,7 +62,7 @@ export default function Home() {
               Our clothes carry the DNA of the streets—skater cuts, hood-inspired designs, and unapologetic statements—blended with a touch of light and hope. Every drop is limited, every release is a statement, and every piece is built to stand out while staying true.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3 items-center justify-center">
-              <Link href="#drops" className="btn-lemonted rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-wide">Shop Lemonted Drops</Link>
+              <Link href="/store" className="btn-lemonted rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-wide">Shop Lemonted Drops</Link>
               <Link href="#story" className="rounded-full px-6 py-3 text-sm font-semibold uppercase tracking-wide badge-lemonted">Our Story</Link>
             </div>
             <div className="mt-10 flex items-center justify-center gap-4 text-white/60 text-xs uppercase tracking-wide">

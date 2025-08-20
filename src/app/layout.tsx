@@ -84,12 +84,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  nav,
 }: Readonly<{
   children: React.ReactNode;
+  nav: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body className={`${baloo2.variable} antialiased`}>
+        {nav}
         {children}
       </body>
     </html>
