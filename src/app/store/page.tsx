@@ -18,7 +18,7 @@ const categories: Array<{ key: string; label: string; tagline: string }> = [
 export default function StorePage() {
   return (
     <div className="min-h-screen w-full font-sans">
-      <main className="relative isolate px-6 sm:px-10 py-10">
+      <main className="relative isolate px-6 sm:px-10 pt-24 sm:pt-32 pb-10">
         {/* Background texture and accents */}
         <div className="pointer-events-none absolute inset-0 -z-10">
           <div className="absolute inset-0 hero-gradient" />

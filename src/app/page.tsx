@@ -36,7 +36,7 @@ export default function Home() {
         {/* Nav is provided via parallel route */}
 
         {/* Hero */}
-        <section className="px-6 sm:px-10 pt-10 pb-16 sm:pt-16 sm:pb-24">
+        <section className="px-6 sm:px-10 pt-24 pb-16 sm:pt-32 sm:pb-24">
           <div className="max-w-5xl mx-auto text-center">
             <div className="relative">
               <Image
